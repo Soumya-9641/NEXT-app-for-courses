@@ -1,6 +1,7 @@
 import React,{useState,useEffect} from 'react'
 import data from "../datalist.json"
 import { useRouter } from 'next/router';
+import Image from 'next/image';
 const Courses = ({user}) => {
     const [disabled, setdisabled] = useState(false)
     const [disabled1, setdisabled1] = useState(true)
@@ -35,7 +36,7 @@ const Courses = ({user}) => {
        {filteredData.map((course)=>(
         <div key={course.id} className="p-4 md:w-1/3">
           <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
-            <img className="lg:h-48 md:h-36 w-full object-cover object-center" src={course.image_link} alt="blog"/>
+            <Image className="lg:h-48 md:h-36 w-full object-cover object-center" src={course.image_link} alt="blog"/>
             <div className="p-6">
               <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">COURSE NAME</h2>
               <h1 className="title-font text-lg font-medium text-gray-300 mb-3">{course.course_name}</h1>

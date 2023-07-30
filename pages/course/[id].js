@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 
 import Link from 'next/link';
 import data from "../datalist.json"
-
+import Image from 'next/image';
 import { AiOutlineHeart } from 'react-icons/ai';
 
 const Slug = ({item}) => {
@@ -15,7 +15,7 @@ const Slug = ({item}) => {
     <div className='sticky top-0 z-50 text-gray-600 body-font bg-gray-600'>
     <div className=" container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
       <Link href={'/'}>
-      <img className='w-12 h-12'src='https://img.freepik.com/free-vector/bird-colorful-logo-gradient-vector_343694-1365.jpg' alt='' />
+      <Image className='w-12 h-12'src='https://img.freepik.com/free-vector/bird-colorful-logo-gradient-vector_343694-1365.jpg' alt='' />
       </Link> 
       <a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
       <span className="ml-3 text-xl">Course.com</span>
@@ -27,7 +27,7 @@ const Slug = ({item}) => {
   <div className="container px-5 py-24 mx-auto flex flex-col">
     <div className="lg:w-4/6 mx-auto">
       <div className="rounded-lg h-64 overflow-hidden">
-        <img alt="content" className="object-cover object-center h-100% w-full " src={item.image_link}/>
+        <Image alt="content" className="object-cover object-center h-100% w-full " src={item.image_link}/>
       </div>
       <div className="flex flex-col sm:flex-row mt-10">
         <div className="sm:w-1/3 text-center sm:pr-8 sm:py-8">
