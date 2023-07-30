@@ -3,7 +3,7 @@ import React,{useEffect} from 'react'
 import { useRouter } from 'next/router'
 import { useState } from 'react'
 import { supabase } from './lib/initSupabase';
-
+import Image from 'next/image';
 const Login = () => {
   const router = useRouter()
    const [email, setEmail] = useState('')
@@ -46,7 +46,7 @@ const Login = () => {
       className="flex xl:justify-center lg:justify-between justify-center items-center flex-wrap h-full g-6" >
       <div
         className="grow-0 shrink-1 md:shrink-0 basis-auto xl:w-6/12 lg:w-6/12 md:w-9/12 mb-12 md:mb-0">
-        <img
+        <Image
           src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
           className="w-full"
           alt="Sample image"
@@ -157,7 +157,7 @@ const Login = () => {
               Login
             </button>
             <p className="text-sm font-semibold mt-2 pt-1 mb-0">
-              Don't have an account?
+              Dont have an account?
               <a
                 href={'/components/register'}
                 className="text-red-600 hover:text-red-700 focus:text-red-700 transition duration-200 ease-in-out"
