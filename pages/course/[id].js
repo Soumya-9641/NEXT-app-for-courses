@@ -15,7 +15,7 @@ const Slug = ({item}) => {
     <div className='sticky top-0 z-50 text-gray-600 body-font bg-gray-600'>
     <div className=" container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
       <Link href={'/'}>
-      <Image className='w-12 h-12'src='https://img.freepik.com/free-vector/bird-colorful-logo-gradient-vector_343694-1365.jpg' alt='' />
+      <Image className=''src='https://img.freepik.com/free-vector/bird-colorful-logo-gradient-vector_343694-1365.jpg'  alt='' width={50} height={50}/>
       </Link> 
       <a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
       <span className="ml-3 text-xl">Course.com</span>
@@ -27,7 +27,7 @@ const Slug = ({item}) => {
   <div className="container px-5 py-24 mx-auto flex flex-col">
     <div className="lg:w-4/6 mx-auto">
       <div className="rounded-lg h-64 overflow-hidden">
-        <Image alt="content" className="object-cover object-center h-100% w-full " src={item.image_link}/>
+        <Image alt="content" className="object-cover object-center h-100% w-full " src={item.image_link} width={900} height={900}/>
       </div>
       <div className="flex flex-col sm:flex-row mt-10">
         <div className="sm:w-1/3 text-center sm:pr-8 sm:py-8">
@@ -43,7 +43,7 @@ const Slug = ({item}) => {
           
             {item.video_links.map((link,index)=>(
               
-              <div key={link.id} className="flex flex-wrap -m-2">
+              <div key={index} className="flex flex-wrap -m-2">
             
             <div className="p-2 lg:w-1/2 md:w-1/2 w-full">
               <div className="h-full flex items-center border-gray-200 border p-4 rounded-lg">
